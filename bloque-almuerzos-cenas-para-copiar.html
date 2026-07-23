@@ -1,0 +1,39 @@
+<!-- PEGAR ESTE BLOQUE DE ESTILOS DENTRO DEL <style> DE TU ARCHIVO -->
+<style>
+.meal-map{position:relative;margin-top:28px;padding:72px 38px 38px;border:1px solid rgba(38,56,47,.13);border-radius:34px;background:#eeebe1;overflow:hidden;isolation:isolate;box-shadow:0 24px 70px rgba(50,61,47,.10)}
+.meal-map:before,.meal-map:after{content:"";position:absolute;pointer-events:none;z-index:-1;background:url('assets/blueberry-watercolor.png') no-repeat;mix-blend-mode:multiply}
+.meal-map:before{width:420px;height:300px;right:-140px;top:-105px;background-size:650px auto;background-position:right top;opacity:.6;transform:rotate(5deg);-webkit-mask-image:radial-gradient(ellipse,#000 28%,transparent 73%);mask-image:radial-gradient(ellipse,#000 28%,transparent 73%)}
+.meal-map:after{width:350px;height:260px;left:-155px;bottom:-95px;background-size:580px auto;background-position:left bottom;opacity:.38;transform:rotate(-9deg);-webkit-mask-image:radial-gradient(ellipse,#000 25%,transparent 72%);mask-image:radial-gradient(ellipse,#000 25%,transparent 72%)}
+.meal-map-head{max-width:760px;margin-bottom:30px}.meal-map-head .eyebrow{text-transform:uppercase;letter-spacing:.18em;font:600 .73rem 'DM Sans',Arial,sans-serif;color:#526789}.meal-map-head h3{font:500 clamp(2rem,4vw,3.5rem)/1.08 'Playfair Display',Georgia,serif;letter-spacing:-.035em;color:#26382f;margin:7px 0 12px}.meal-map-head p{margin:0;color:#6e786e;font-family:'DM Sans',Arial,sans-serif}
+.lunch-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.meal-card{padding:27px;background:rgba(255,255,255,.88);border:1px solid rgba(38,56,47,.11);border-radius:20px;backdrop-filter:blur(8px);font-family:'DM Sans',Arial,sans-serif}.meal-card .when{font-size:.68rem;text-transform:uppercase;letter-spacing:.13em;color:#526789;font-weight:600}.meal-card h4{font:500 1.5rem/1.15 'Playfair Display',Georgia,serif;color:#26382f;margin:10px 0 16px}.meal-card ul{list-style:none;margin:0;padding:0}.meal-card li{padding:8px 0;border-top:1px solid rgba(38,56,47,.13);font-size:.86rem;line-height:1.55;color:#6e786e}.meal-card li:first-child{border:0}.meal-card li strong{color:#26382f}.meal-card.rest{background:#e3e8df}
+.dinner-band{display:grid;grid-template-columns:.72fr 1.28fr;gap:38px;align-items:center;margin-top:14px;padding:34px;border-radius:22px;background:#26382f;color:#fff;font-family:'DM Sans',Arial,sans-serif}.dinner-band h4{font:500 2rem/1.1 'Playfair Display',Georgia,serif;margin:6px 0}.dinner-band p{margin:0;color:rgba(255,255,255,.73);font-size:.92rem;line-height:1.65}.no-carb{display:inline-flex;padding:7px 11px;border:1px solid rgba(255,255,255,.25);border-radius:999px;text-transform:uppercase;letter-spacing:.12em;font-size:.64rem;color:#dce4d7}
+@media(max-width:980px){.lunch-grid{grid-template-columns:1fr}.dinner-band{grid-template-columns:1fr}}
+@media(max-width:680px){.meal-map{padding:54px 15px 15px;border-radius:25px}.meal-map-head{padding:0 8px}.meal-map:before{width:260px;height:200px;right:-125px;top:-70px;background-size:430px auto}.meal-card{padding:22px}.dinner-band{padding:25px}}
+</style>
+
+<!-- PEGAR ESTA SECCIÓN DEBAJO DEL BLOQUE "EL PLATO DE LOS DÍAS DE ENTRENO" -->
+<section class="meal-map" aria-labelledby="meal-map-title">
+  <div class="meal-map-head">
+    <div class="eyebrow">Almuerzos & cenas</div>
+    <h3 id="meal-map-title">Qué cambia según el día.</h3>
+    <p>Los almuerzos con entrenamiento o partido incluyen cereales. En los días sin actividad, el almuerzo se arma igual que la cena: proteína + verduras.</p>
+  </div>
+  <div class="lunch-grid">
+    <article class="meal-card">
+      <span class="when">Almuerzo · día de entreno</span><h4>Plato completo</h4>
+      <ul><li><strong>Cereal:</strong> ¼ de plato, 50 g crudo = 100 g cocido; o papa, batata o choclo de 150–200 g.</li><li><strong>Proteína:</strong> una porción de 160 g cocidos.</li><li><strong>Verduras:</strong> completar crudas o cocidas.</li><li><strong>Aceite:</strong> hasta 1 cucharada sopera, idealmente menos.</li></ul>
+    </article>
+    <article class="meal-card">
+      <span class="when">Almuerzo · día de partido</span><h4>Pre partido</h4>
+      <ul><li><strong>Cereal:</strong> ⅓ de plato, 70 g crudo = 140 g cocido; o papa, batata o choclo de 200–230 g.</li><li><strong>Proteína:</strong> una porción de 160 g cocidos.</li><li><strong>Verduras:</strong> completar; se pueden obviar si es necesario.</li><li><strong>Aceite:</strong> hasta 1 cucharada sopera, idealmente menos.</li></ul>
+    </article>
+    <article class="meal-card rest">
+      <span class="when">Almuerzo · día sin entreno</span><h4>Proteína + verduras</h4>
+      <ul><li><strong>Sin porción de cereales.</strong></li><li><strong>Proteína:</strong> porción ampliada de 180–220 g cocidos.</li><li><strong>Verduras:</strong> ½ a 1 plato grande, 250–400 g.</li><li><strong>Aceite:</strong> hasta 1 cucharada de postre (5 cc).</li></ul>
+    </article>
+  </div>
+  <div class="dinner-band">
+    <div><span class="no-carb">Todas las noches</span><h4>Cena: proteína + verduras</h4></div>
+    <p><strong style="color:#fff">Proteína ampliada:</strong> 180–220 g cocidos + <strong style="color:#fff">verduras abundantes:</strong> ½ a 1 plato grande (250–400 g). Sin arroz, fideos, papa, batata, choclo, mandioca ni legumbres. Condimentos libres y hasta 1 cucharada de postre de aceite en crudo. Evitá el aceite de cocción o usá el mínimo indispensable.</p>
+  </div>
+</section>
